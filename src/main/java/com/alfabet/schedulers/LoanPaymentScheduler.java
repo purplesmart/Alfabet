@@ -29,7 +29,7 @@ public class LoanPaymentScheduler {
     @Autowired
     private LoanConfiguration loanConfiguration;
 
-    @Scheduled(fixedRate = 5000)//(cron = "0 0 0 * * *")
+    @Scheduled(cron = "0 0 0 * * *")
     public void loan_payment_task() {
 
         List<SchedulerLoan> schedulerLoans = getSchedulerLoans();
